@@ -1,6 +1,6 @@
 # Navalny Informer
 
-![Cover](https://lh3.googleusercontent.com/TIDfEVa42oRAydr752D1YJjRCpf8per1xdYp_vK60hXhPnQnTIdBDZF7qQSfCzFGJwOSnlCmvSs1kxLCYvGBGlIpXQ=w640-h400-e365-rj-sc0x00ffffff)
+![Cover](https://raw.githubusercontent.com/drugz/navalny_informer/main/Screenshot%205.jpg)
 
 Привет, это Навальный! Вы наверняка часто скучаете по этим словам. Даже когда Алексей находится в заложниках, важная работа по борьбе с коррупцией ведётся по всей России. Перед вами находится неофициальный новостной информер самого важного сайта рунета, из него вы узнаете какие кампании ведутся, что происходит в России настоящего и насколько приблизилась Россия Будущего. Присоединяйтесь и устанавливайте расширение в браузер Chrome, чтобы не пропустить самого важного в жизни России.
 
