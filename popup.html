@@ -21,26 +21,30 @@
             src: local('GraphikLC'), url('https://shtab.navalny.com/fonts/GraphikLC-BlackItalic.woff2') format('woff2'), url('/fonts/GraphikLC-BlackItalic.woff') format('woff');
         }
 
-        body { width: 360px; height: 400px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; font-size: 14px; padding: 0px 0px 30px 10px; background-color: white; border: 4px solid rgb(255, 51, 0); }
+        body {
+            width: 360px;
+            height: 400px;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            padding: 0px 0px 30px 10px;
+            background-color: white;
+            border: 4px solid rgb(255, 51, 0);
+        }
 
-        /* Let's get this party started */
         ::-webkit-scrollbar {
             width: 6px;
         }
 
-        /* Track */
         ::-webkit-scrollbar-track {
-            /* -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
             -webkit-border-radius: 10px;
             border-radius: 10px;
         }
 
-        /* Handle */
         ::-webkit-scrollbar-thumb {
             -webkit-border-radius: 10px;
             border-radius: 10px;
             background: rgb(255, 51, 0);
-            /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
         }
 
         ::-webkit-scrollbar-thumb:window-inactive {
@@ -114,16 +118,7 @@
             color: inherit;
         }
 
-        .div-c {
-            /* display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 3px;
-            grid-row-gap: 0px; */
-        }
-
         .div-c1 {
-            /* grid-area: 1 / 1 / 3 / 2; */
             width: auto;
             min-width: 40%;
             max-width: 47%;
@@ -131,17 +126,11 @@
         }
 
         .div-c2 {
-            /* grid-area: 1 / 2 / 2 / 3;
-            align-self: flex-end; */
             margin-left: 10px;
             width: auto;
             max-width: 45%;
             display: inline-block;
 
-        }
-
-        .div-c3 {
-            /* grid-area: 2 / 2 / 3 / 3; */
         }
 
         #main_campain {
@@ -150,7 +139,6 @@
 
         #main_campain_big_digit {
             font-size: 8.7vw;
-            /* font-size: 11.1vw; */
             text-align: left;
             white-space: nowrap;
             transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -309,11 +297,11 @@
 
         #contents {
             overflow-y: scroll;
-    overflow-x: hidden;
-    height: 311px;
-    width: 355px;
-    padding-right: 10px;
-    margin-top: 5px;
+            overflow-x: hidden;
+            height: 311px;
+            width: 355px;
+            padding-right: 10px;
+            margin-top: 5px;
         }
 
         #contents .content-title {
@@ -323,9 +311,6 @@
             z-index: 2;
 
         }
-
-        #newsList,
-        #videoList {}
 
         #newsList .posts,
         #videoList .videos {
@@ -367,26 +352,17 @@
             width: 30px;
             height: 30px;
             overflow: hidden;
-            /* width: auto; */
             transition: all .1s ease-in-out;
             z-index: 1;
-            /* transform: scale(0.8); */
             border: 1px solid rgb(255, 255, 255);
             border-radius: 50%;
         }
-
-        /* #shopList .items:nth-child(2n){
-            transform: translate(-15px, 0px);
-        } */
 
         #shopList .items:hover {
             z-index: 100;
             transform: scale(5.5);
             position: relative;
             display: block;
-            /* bottom: -5px;
-        left: 10px;
-        right: -10px; */
             border-radius: 50%;
             border: 1px solid rgb(255, 51, 0);
         }
@@ -401,11 +377,6 @@
 
         #shopList .items:hover:nth-child(7n) {
             transform: translate(-18px, 0) scale(4);
-        }
-
-
-        #shopList .items:hover img {
-            /* margin: 20%; */
         }
 
         #help {
@@ -468,7 +439,8 @@
                 </div>
             </div>
         </div>
-        <a id="help" target="_blank" href="https://github.com/drugz/navalny_informer" title="Получить помощь и поддержать" class="black"><svg width="16" height="16" viewBox="0 0 20 19"
+        <a id="help" target="_blank" href="https://github.com/drugz/navalny_informer"
+            title="Получить помощь и поддержать" class="black"><svg width="16" height="16" viewBox="0 0 20 19"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M10.8354 0.162276C10.892 0.11941 10.9415 0.0692817 10.9831 0.0137125L13.5446 0.0137126C13.5565 0.0137126 13.5683 0.0134315 13.5802 0.0128693C13.7501 0.00480224 13.9201 0.00484682 14.0893 0.0128711C14.1011 0.013432 14.113 0.0137127 14.1248 0.0137127H14.1631C14.7381 0.0137127 15.2816 0.139771 15.7693 0.365049C15.7822 0.371016 15.7953 0.376614 15.8085 0.381837C16.7261 0.743926 17.5452 1.36082 18.1483 2.20428C19.0574 3.4756 19.341 5.06951 18.9532 6.55242L15.6715 3.31483C15.5312 3.17636 15.342 3.09873 15.1448 3.09873L10.4 3.09873C10.3898 3.09873 10.3796 3.09894 10.3694 3.09935C10.2167 3.10558 10.0693 3.15834 9.94709 3.25093L8.06254 4.67873C8.00942 4.71898 7.95343 4.75291 7.89548 4.78064C7.48983 4.97478 6.98831 4.86539 6.70473 4.49495C6.66445 4.44232 6.63046 4.38691 6.60266 4.3296C6.40804 3.92844 6.51638 3.43454 6.88618 3.15436L10.8354 0.162276Z"
@@ -490,10 +462,7 @@
                     fill="#ccc" />
             </svg></a>
     </div>
-    <!-- <script src="background.js"></script> -->
     <script src="popup.js">
-
-
     </script>
 </body>
 
