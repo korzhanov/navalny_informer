@@ -5,7 +5,7 @@
 
 ## Установка
 Попробуйте один из вариантов:
-- Перейдите в Chrome Extension Store по [ссылке](https://) и добавьте его к себе 
+- Перейдите в Chrome Extension Store по [ссылке](https://chrome.google.com/webstore/detail/hi-navalny-informer/mhahffdhjmmcllffihkedicnjicpfopg) и добавьте его к себе 
 - Скачайте исходники и установите в режиме отладки
 - Скачайте релиз и установите в браузере
 
