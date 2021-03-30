@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "HI! Navalny informer",
+    "description": "Привет, это Навальный! Новостной информер самого важного сайта рунета. Здесь вы узнаете что происходит в России настоящего, и насколько приблизилась Россия Будущего",
+    "version": "1.0",
+    "icons": {
+        "128": "128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "http://*/",
+        "https://*/"
+      ],
+    "permissions": [
+        "unlimitedStorage",
+        "notifications",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
