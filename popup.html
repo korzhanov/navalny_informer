@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Привет, это Навальный-Информер!</title>
+    <style>
+        @font-face {
+            font-family: 'GraphikLC';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: local('GraphikLC'), url('https://shtab.navalny.com/fonts/GraphikLC-Black.woff2') format('woff2'), url('/fonts/GraphikLC-Black.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'GraphikLC';
+            font-style: italic;
+            font-weight: 900;
+            font-display: swap;
+            src: local('GraphikLC'), url('https://shtab.navalny.com/fonts/GraphikLC-BlackItalic.woff2') format('woff2'), url('/fonts/GraphikLC-BlackItalic.woff') format('woff');
+        }
+
+        body { width: 360px; height: 400px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; font-size: 14px; padding: 0px 0px 30px 10px; background-color: white; border: 4px solid rgb(255, 51, 0); }
+
+        /* Let's get this party started */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: rgb(255, 51, 0);
+            /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+        }
+
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgb(255, 51, 0);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0.3em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        button,
+        .title {
+            font-family: GraphikLC, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            font-weight: 900;
+            color: rgb(255, 51, 0);
+            text-transform: uppercase;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        p {
+            font-weight: normal;
+        }
+
+        a {
+            color: #0d7fa3;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        button {
+            font-family: GraphikLC, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            color: #fff;
+            background: transparent;
+            border: none;
+        }
+
+        button * {
+            font-family: inherit;
+        }
+
+        button,
+        a {
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p a {
+            color: inherit;
+        }
+
+        .div-c {
+            /* display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 3px;
+            grid-row-gap: 0px; */
+        }
+
+        .div-c1 {
+            /* grid-area: 1 / 1 / 3 / 2; */
+            width: auto;
+            min-width: 40%;
+            max-width: 47%;
+            display: inline-block;
+        }
+
+        .div-c2 {
+            /* grid-area: 1 / 2 / 2 / 3;
+            align-self: flex-end; */
+            margin-left: 10px;
+            width: auto;
+            max-width: 45%;
+            display: inline-block;
+
+        }
+
+        .div-c3 {
+            /* grid-area: 2 / 2 / 3 / 3; */
+        }
+
+        #main_campain {
+            font-size: 11px;
+        }
+
+        #main_campain_big_digit {
+            font-size: 8.7vw;
+            /* font-size: 11.1vw; */
+            text-align: left;
+            white-space: nowrap;
+            transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .black {
+            color: rgb(0, 0, 51);
+        }
+
+        a .black:hover {
+            color: rgb(0, 107, 121);
+        }
+
+        .scale-in-ver-center {
+            -webkit-animation: scale-in-ver-center .5s cubic-bezier(.25, .46, .45, .94) both;
+            animation: scale-in-ver-center .5s cubic-bezier(.25, .46, .45, .94) both
+        }
+
+        .flip-in-ver-right {
+            -webkit-animation: flip-in-ver-right .5s cubic-bezier(.25, .46, .45, .94) both;
+            animation: flip-in-ver-right .5s cubic-bezier(.25, .46, .45, .94) both
+        }
+
+        .tracking-in-expand {
+            -webkit-animation: tracking-in-expand .3s cubic-bezier(.215, .61, .355, 1.000) both;
+            animation: tracking-in-expand .3s cubic-bezier(.215, .61, .355, 1.000) both
+        }
+
+        .tracking-out-contract {
+            -webkit-animation: tracking-out-contract .3s cubic-bezier(.55, .085, .68, .53) both;
+            animation: tracking-out-contract .3s cubic-bezier(.55, .085, .68, .53) both
+        }
+
+        @-webkit-keyframes scale-in-ver-center {
+            0% {
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+                opacity: 1
+            }
+
+            100% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: 1
+            }
+        }
+
+        @keyframes scale-in-ver-center {
+            0% {
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+                opacity: 1
+            }
+
+            100% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes flip-in-ver-right {
+            0% {
+                -webkit-transform: rotateY(-80deg);
+                transform: rotateY(-80deg);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes flip-in-ver-right {
+            0% {
+                -webkit-transform: rotateY(-80deg);
+                transform: rotateY(-80deg);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes tracking-in-expand {
+            0% {
+                letter-spacing: -.5em;
+                opacity: 0
+            }
+
+            40% {
+                opacity: .6
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        @keyframes tracking-in-expand {
+            0% {
+                letter-spacing: -.5em;
+                opacity: 0
+            }
+
+            40% {
+                opacity: .6
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        /* ----------------------------------------------
+        * Generated by Animista on 2021-3-28 15:40:19
+        * Licensed under FreeBSD License.
+        * See http://animista.net/license for more info. 
+        * w: http://animista.net, t: @cssanimista
+        * ---------------------------------------------- */
+
+        @-webkit-keyframes tracking-out-contract {
+            0% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            100% {
+                letter-spacing: -.5em;
+                opacity: 0
+            }
+        }
+
+        @keyframes tracking-out-contract {
+            0% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            100% {
+                letter-spacing: -.5em;
+                opacity: 0
+            }
+        }
+
+        #contents {
+            overflow-y: scroll;
+    overflow-x: hidden;
+    height: 311px;
+    width: 355px;
+    padding-right: 10px;
+    margin-top: 5px;
+        }
+
+        #contents .content-title {
+            position: sticky;
+            top: -1px;
+            background: #fff;
+            z-index: 2;
+
+        }
+
+        #newsList,
+        #videoList {}
+
+        #newsList .posts,
+        #videoList .videos {
+            align-items: start;
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        #contents .media {
+            margin-right: 16px;
+            width: 170px;
+        }
+
+        #videoList .media {
+            width: 60%;
+        }
+
+        #contents .media .img {
+            width: 100%;
+        }
+
+        #contents .content {
+            flex: 1;
+        }
+
+        #contents .content h5,
+        #contents .content h6 {
+            margin-top: 3vw;
+        }
+
+        #shopList {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding: 0 10px 50px 0px;
+        }
+
+        #shopList .items {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            /* width: auto; */
+            transition: all .1s ease-in-out;
+            z-index: 1;
+            /* transform: scale(0.8); */
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+
+        /* #shopList .items:nth-child(2n){
+            transform: translate(-15px, 0px);
+        } */
+
+        #shopList .items:hover {
+            z-index: 100;
+            transform: scale(5.5);
+            position: relative;
+            display: block;
+            /* bottom: -5px;
+        left: 10px;
+        right: -10px; */
+            border-radius: 50%;
+            border: 1px solid rgb(255, 51, 0);
+        }
+
+        #shopList .items:hover:nth-child(7n+1) {
+            transform: translate(48px, 0) scale(4);
+        }
+
+        #shopList .items:hover:nth-child(7n+2) {
+            transform: translate(38px, 0) scale(5);
+        }
+
+        #shopList .items:hover:nth-child(7n) {
+            transform: translate(-18px, 0) scale(4);
+        }
+
+
+        #shopList .items:hover img {
+            /* margin: 20%; */
+        }
+
+        #help {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal-header">
+        <h3 class="italic tracking-in-expand">Привет,<br> это Навальный! </h3>
+    </div>
+    <div class="modal-body">
+        <a target="_blank"
+            href="https://free.navalny.com/?utm_source=chrome_extention&utm_medium=navalny_informer&utm_campaign=freenavalny">
+            <div id="main_campain" class="div-c">
+                <div id="main_campain_big_digit_wrap" class="div-c1 title black italic">
+                    <div id="main_campain_big_digit" class="tracking-in-expand">000 000</div>
+                </div>
+                <div class="div-c2 italic">
+                    <div class=" title black tracking-in-expand">УЧАСТВУЮТ В ПРОТЕСТАХ</div>
+                    <div class=" title target tracking-in-expand">НАША ЦЕЛЬ — 500 000</div>
+                </div>
+            </div>
+        </a>
+        <div id="contents" class="flip-in-ver-right scale-in-ver-center">
+            <h3 class="content-title black">Штабы.Главное </h3>
+            <div id="newsList" class="">
+                <div class="posts">
+                    <div class="media">
+                        <img
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
+                    </div>
+                    <div class="content">
+                        Загрузка...
+                    </div>
+                </div>
+            </div>
+            <h3 class="content-title black">Штабы.Видео </h3>
+            <div id="videoList" class="">
+                <div class="videos">
+                    <div class="media">
+                        <img
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
+                    </div>
+                    <div class="content">
+                        Загрузка...
+                    </div>
+                </div>
+            </div>
+            <h3 class="content-title black">Navalny.Shop </h3>
+            <div id="shopList" class="">
+                <div class="items">
+                    <div class="media">
+                        <img
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="help" target="_blank" href="https://github.com/drugz/navalny_informer" title="Получить помощь и поддержать" class="black"><svg width="16" height="16" viewBox="0 0 20 19"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10.8354 0.162276C10.892 0.11941 10.9415 0.0692817 10.9831 0.0137125L13.5446 0.0137126C13.5565 0.0137126 13.5683 0.0134315 13.5802 0.0128693C13.7501 0.00480224 13.9201 0.00484682 14.0893 0.0128711C14.1011 0.013432 14.113 0.0137127 14.1248 0.0137127H14.1631C14.7381 0.0137127 15.2816 0.139771 15.7693 0.365049C15.7822 0.371016 15.7953 0.376614 15.8085 0.381837C16.7261 0.743926 17.5452 1.36082 18.1483 2.20428C19.0574 3.4756 19.341 5.06951 18.9532 6.55242L15.6715 3.31483C15.5312 3.17636 15.342 3.09873 15.1448 3.09873L10.4 3.09873C10.3898 3.09873 10.3796 3.09894 10.3694 3.09935C10.2167 3.10558 10.0693 3.15834 9.94709 3.25093L8.06254 4.67873C8.00942 4.71898 7.95343 4.75291 7.89548 4.78064C7.48983 4.97478 6.98831 4.86539 6.70473 4.49495C6.66445 4.44232 6.63046 4.38691 6.60266 4.3296C6.40804 3.92844 6.51638 3.43454 6.88618 3.15436L10.8354 0.162276Z"
+                    fill="#ccc" />
+                <path
+                    d="M5.8994 11.2357L5.88615 11.2487L4.91208 12.2166L4.89928 12.2294C4.54626 12.5663 3.98518 12.562 3.63746 12.2165C3.28536 11.8667 3.28536 11.2995 3.63746 10.9496L4.61153 9.98179C4.96363 9.63194 5.5345 9.63194 5.88659 9.98179C6.23437 10.3273 6.23864 10.885 5.8994 11.2357Z"
+                    fill="#ccc" />
+                <path
+                    d="M5.60864 12.9344C5.2694 13.2852 5.27368 13.8428 5.62145 14.1883C5.97355 14.5382 6.54441 14.5382 6.89651 14.1883L7.87059 13.2205C8.22269 12.8706 8.22269 12.3034 7.87059 11.9536C7.82712 11.9104 7.78032 11.8725 7.73101 11.84C7.38584 11.6123 6.91765 11.6459 6.60875 11.9407L6.59597 11.9535L5.62189 12.9214L5.60864 12.9344Z"
+                    fill="#ccc" />
+                <path
+                    d="M3.50149 8.40792C3.85359 8.75776 3.85359 9.32498 3.50149 9.67482L2.52742 10.6427C2.17532 10.9925 1.60445 10.9925 1.25236 10.6427C0.900257 10.2928 0.900257 9.72561 1.25235 9.37576L2.22643 8.40792C2.57853 8.05807 3.14939 8.05807 3.50149 8.40792Z"
+                    fill="#ccc" />
+                <path
+                    d="M9.85507 13.9253C10.2072 14.2752 10.2072 14.8424 9.85507 15.1922L8.88099 16.1601C8.80876 16.2318 8.72732 16.2889 8.64045 16.3312C8.30388 16.4952 7.8858 16.4381 7.60593 16.1601C7.32607 15.882 7.26865 15.4666 7.43369 15.1322L7.43495 15.1296C7.47742 15.0443 7.53441 14.9642 7.60593 14.8932L8.58001 13.9253C8.93211 13.5755 9.50297 13.5755 9.85507 13.9253Z"
+                    fill="#ccc" />
+                <path
+                    d="M3.34481 1.83107C4.74046 0.44435 6.63875 -0.138546 8.45696 0.0823778L5.98035 1.95876C4.89507 2.78101 4.68601 4.32557 5.51366 5.40674C6.33954 6.48558 7.88542 6.69482 8.96837 5.87433L10.652 4.59873L14.8371 4.59873L18.3436 8.05814C18.3547 8.07194 18.3667 8.08528 18.3795 8.0981L19.5295 9.24806C20.0913 9.80987 20.0913 10.7207 19.5295 11.2825C18.9997 11.8123 18.1594 11.8425 17.5943 11.3731L17.498 11.2768C17.479 11.2578 17.4589 11.2407 17.4379 11.2254L16.345 10.1326C16.1498 9.93731 15.8332 9.93731 15.6379 10.1326C15.4427 10.3278 15.4427 10.6444 15.6379 10.8397L16.7879 11.9896C16.8295 12.0312 16.8722 12.071 16.916 12.109L16.9598 12.1528C17.3578 12.5508 17.3578 13.196 16.9598 13.594C16.5618 13.992 15.9166 13.992 15.5186 13.594L15.3497 13.4251C15.1544 13.2298 14.8378 13.2298 14.6426 13.4251C14.5425 13.5252 14.4937 13.6572 14.4962 13.7884C14.4933 13.9201 14.5421 14.0527 14.6425 14.1532L14.8655 14.3762C15.2336 14.7443 15.2336 15.3411 14.8655 15.7092C14.4974 16.0773 13.9006 16.0773 13.5325 15.7092L13.5314 15.7081L13.5197 15.6962L13.3097 15.4862C13.2372 15.4137 13.148 15.3681 13.0545 15.3495C12.8961 15.3178 12.7252 15.3633 12.6024 15.4862C12.4072 15.6814 12.4072 15.998 12.6024 16.1933L12.8208 16.4117C13.1878 16.7876 13.1851 17.3898 12.8126 17.7623C12.4441 18.1308 11.8489 18.1384 11.4711 17.7793L10.0395 16.4187L10.5644 15.8971C11.3083 15.1579 11.3083 13.9596 10.5644 13.2205C10.1718 12.8303 9.65038 12.6461 9.13614 12.6679C9.15798 12.1569 8.97259 11.6389 8.57996 11.2487C8.18744 10.8587 7.66623 10.6745 7.15214 10.6961C7.174 10.1852 6.98861 9.66708 6.59597 9.27695C6.09635 8.78054 5.38825 8.61753 4.75172 8.78794C4.69806 8.39115 4.51777 8.00803 4.21086 7.70308C3.52443 7.02104 2.44443 6.96838 1.69721 7.54509C1.23546 5.55553 1.78466 3.38124 3.34481 1.83107Z"
+                    fill="#ccc" />
+            </svg></a>
+    </div>
+    <!-- <script src="background.js"></script> -->
+    <script src="popup.js">
+
+
+    </script>
+</body>
+
+</html>
