@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "HI! Navalny informer",
-    "description": "Привет, это Навальный! Новостной информер самого важного сайта рунета. Россия Будущего будет счастливой",
-    "version": "1.0",
+    "name": "Привет, это Навальный!",
+    "description": "Новостной информер самого важного сайта рунета. Россия Будущего будет счастливой",
+    "version": "1.0.1",
     "icons": {
         "128": "128.png"
     },
@@ -14,7 +14,8 @@
         "https://*/"
       ],
     "permissions": [       
-        "storage"
+        "storage",
+        "alarms"
     ],
     "action": {
         "default_popup": "popup.html"
