@@ -4,387 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Привет, это Навальный-Информер!</title>
-    <style>
-        @font-face {
-            font-family: 'GraphikLC';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: local('GraphikLC'), url('https://shtab.navalny.com/fonts/GraphikLC-Black.woff2') format('woff2'), url('/fonts/GraphikLC-Black.woff') format('woff');
-        }
-
-        @font-face {
-            font-family: 'GraphikLC';
-            font-style: italic;
-            font-weight: 900;
-            font-display: swap;
-            src: local('GraphikLC'), url('https://shtab.navalny.com/fonts/GraphikLC-BlackItalic.woff2') format('woff2'), url('/fonts/GraphikLC-BlackItalic.woff') format('woff');
-        }
-
-        body {
-            width: 360px;
-            height: 400px;
-            overflow: hidden;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            padding: 0px 0px 30px 10px;
-            background-color: white;
-            border: 4px solid rgb(255, 51, 0);
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            background: rgb(255, 51, 0);
-        }
-
-        ::-webkit-scrollbar-thumb:window-inactive {
-            background: rgb(255, 51, 0);
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-bottom: 0.3em;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        button,
-        .title {
-            font-family: GraphikLC, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-            font-weight: 900;
-            color: rgb(255, 51, 0);
-            text-transform: uppercase;
-        }
-
-        .italic {
-            font-style: italic;
-        }
-
-        p {
-            font-weight: normal;
-        }
-
-        a {
-            color: #0d7fa3;
-            -webkit-text-decoration: none;
-            text-decoration: none;
-            -webkit-transition: 0.2s ease;
-            transition: 0.2s ease;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        button {
-            font-family: GraphikLC, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-            color: #fff;
-            background: transparent;
-            border: none;
-        }
-
-        button * {
-            font-family: inherit;
-        }
-
-        button,
-        a {
-            cursor: pointer;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        p a {
-            color: inherit;
-        }
-
-        .div-c1 {
-            width: auto;
-            min-width: 40%;
-            max-width: 47%;
-            display: inline-block;
-        }
-
-        .div-c2 {
-            margin-left: 10px;
-            width: auto;
-            max-width: 45%;
-            display: inline-block;
-
-        }
-
-        #main_campain {
-            font-size: 11px;
-        }
-
-        #main_campain_big_digit {
-            font-size: 8.7vw;
-            text-align: left;
-            white-space: nowrap;
-            transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-
-        .black {
-            color: rgb(0, 0, 51);
-        }
-
-        a .black:hover {
-            color: rgb(0, 107, 121);
-        }
-
-        .scale-in-ver-center {
-            -webkit-animation: scale-in-ver-center .5s cubic-bezier(.25, .46, .45, .94) both;
-            animation: scale-in-ver-center .5s cubic-bezier(.25, .46, .45, .94) both
-        }
-
-        .flip-in-ver-right {
-            -webkit-animation: flip-in-ver-right .5s cubic-bezier(.25, .46, .45, .94) both;
-            animation: flip-in-ver-right .5s cubic-bezier(.25, .46, .45, .94) both
-        }
-
-        .tracking-in-expand {
-            -webkit-animation: tracking-in-expand .3s cubic-bezier(.215, .61, .355, 1.000) both;
-            animation: tracking-in-expand .3s cubic-bezier(.215, .61, .355, 1.000) both
-        }
-
-        .tracking-out-contract {
-            -webkit-animation: tracking-out-contract .3s cubic-bezier(.55, .085, .68, .53) both;
-            animation: tracking-out-contract .3s cubic-bezier(.55, .085, .68, .53) both
-        }
-
-        @-webkit-keyframes scale-in-ver-center {
-            0% {
-                -webkit-transform: scaleY(0);
-                transform: scaleY(0);
-                opacity: 1
-            }
-
-            100% {
-                -webkit-transform: scaleY(1);
-                transform: scaleY(1);
-                opacity: 1
-            }
-        }
-
-        @keyframes scale-in-ver-center {
-            0% {
-                -webkit-transform: scaleY(0);
-                transform: scaleY(0);
-                opacity: 1
-            }
-
-            100% {
-                -webkit-transform: scaleY(1);
-                transform: scaleY(1);
-                opacity: 1
-            }
-        }
-
-        @-webkit-keyframes flip-in-ver-right {
-            0% {
-                -webkit-transform: rotateY(-80deg);
-                transform: rotateY(-80deg);
-                opacity: 0
-            }
-
-            100% {
-                -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-                opacity: 1
-            }
-        }
-
-        @keyframes flip-in-ver-right {
-            0% {
-                -webkit-transform: rotateY(-80deg);
-                transform: rotateY(-80deg);
-                opacity: 0
-            }
-
-            100% {
-                -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-                opacity: 1
-            }
-        }
-
-        @-webkit-keyframes tracking-in-expand {
-            0% {
-                letter-spacing: -.5em;
-                opacity: 0
-            }
-
-            40% {
-                opacity: .6
-            }
-
-            100% {
-                opacity: 1
-            }
-        }
-
-        @keyframes tracking-in-expand {
-            0% {
-                letter-spacing: -.5em;
-                opacity: 0
-            }
-
-            40% {
-                opacity: .6
-            }
-
-            100% {
-                opacity: 1
-            }
-        }
-
-        /* ----------------------------------------------
-        * Generated by Animista on 2021-3-28 15:40:19
-        * Licensed under FreeBSD License.
-        * See http://animista.net/license for more info. 
-        * w: http://animista.net, t: @cssanimista
-        * ---------------------------------------------- */
-
-        @-webkit-keyframes tracking-out-contract {
-            0% {
-                opacity: 1
-            }
-
-            50% {
-                opacity: 1
-            }
-
-            100% {
-                letter-spacing: -.5em;
-                opacity: 0
-            }
-        }
-
-        @keyframes tracking-out-contract {
-            0% {
-                opacity: 1
-            }
-
-            50% {
-                opacity: 1
-            }
-
-            100% {
-                letter-spacing: -.5em;
-                opacity: 0
-            }
-        }
-
-        #contents {
-            overflow-y: scroll;
-            overflow-x: hidden;
-            height: 311px;
-            width: 355px;
-            padding-right: 10px;
-            margin-top: 5px;
-        }
-
-        #contents .content-title {
-            position: sticky;
-            top: -1px;
-            background: #fff;
-            z-index: 2;
-
-        }
-
-        #newsList .posts,
-        #videoList .videos {
-            align-items: start;
-            display: flex;
-            margin-bottom: 15px;
-        }
-
-        #contents .media {
-            margin-right: 16px;
-            width: 170px;
-        }
-
-        #videoList .media {
-            width: 60%;
-        }
-
-        #contents .media .img {
-            width: 100%;
-        }
-
-        #contents .content {
-            flex: 1;
-        }
-
-        #contents .content h5,
-        #contents .content h6 {
-            margin-top: 3vw;
-        }
-
-        #shopList {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            padding: 0 10px 50px 0px;
-        }
-
-        #shopList .items {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            overflow: hidden;
-            transition: all .1s ease-in-out;
-            z-index: 1;
-            border: 1px solid rgb(255, 255, 255);
-            border-radius: 50%;
-        }
-
-        #shopList .items:hover {
-            z-index: 100;
-            transform: scale(5.5);
-            position: relative;
-            display: block;
-            border-radius: 50%;
-            border: 1px solid rgb(255, 51, 0);
-        }
-
-        #shopList .items:hover:nth-child(7n+1) {
-            transform: translate(48px, 0) scale(4);
-        }
-
-        #shopList .items:hover:nth-child(7n+2) {
-            transform: translate(38px, 0) scale(5);
-        }
-
-        #shopList .items:hover:nth-child(7n) {
-            transform: translate(-18px, 0) scale(4);
-        }
-
-        #help {
-            position: absolute;
-            bottom: 10px;
-            right: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="popup.css" >
 </head>
 
 <body>
@@ -396,7 +16,7 @@
             href="https://free.navalny.com/?utm_source=chrome_extention&utm_medium=navalny_informer&utm_campaign=freenavalny">
             <div id="main_campain" class="div-c">
                 <div id="main_campain_big_digit_wrap" class="div-c1 title black italic">
-                    <div id="main_campain_big_digit" class="tracking-in-expand">000 000</div>
+                    <div id="main_campain_big_digit" class="tracking-in-expand"><div class="loader">Загрузка...</div></div>
                 </div>
                 <div class="div-c2 italic">
                     <div class=" title black tracking-in-expand">УЧАСТВУЮТ В ПРОТЕСТАХ</div>
@@ -405,37 +25,51 @@
             </div>
         </a>
         <div id="contents" class="flip-in-ver-right scale-in-ver-center">
-            <h3 class="content-title black">Штабы.Главное </h3>
+            <h3 class="content-title">Штабы.Главное </h3>
             <div id="newsList" class="">
-                <div class="posts">
+                <a class="posts flip-in-ver-right" target="_blank" href="https://shtab.navalny.com/news?utm_source=chrome_extention&utm_medium=navalny_informer&utm_campaign=freenavalny" title="Загрузка...">
                     <div class="media">
-                        <img
-                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
+                    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
                     </div>
                     <div class="content">
-                        Загрузка...
+                    <span class="city">
+                        ${result.city}</span>                                        
+                        <h5>${result.title}</h5>                                       
                     </div>
+              </a>
+                <div class="posts">
+                    <div class="loader">Загрузка...</div>
                 </div>
+              <a class="posts flip-in-ver-right" target="_blank" href="https://shtab.navalny.com/hq/${result.hq_slug}/${result.id}?utm_source=chrome_extention&utm_medium=navalny_informer&utm_campaign=freenavalny" title="${result.annotation}">
+                <div class="media">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
+                </div>
+                <div class="content">
+                <span class="city">${result.city}</span>                                        
+                    <h5>${result.title}</h5>                                       
+                </div>
+          </a>
             </div>
-            <h3 class="content-title black">Штабы.Видео </h3>
+            <h3 class="content-title">Штабы.Видео </h3>
             <div id="videoList" class="">
                 <div class="videos">
-                    <div class="media">
+                    <div class="loader">Загрузка...</div>
+                    <!-- <div class="media">
                         <img
                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
                     </div>
                     <div class="content">
-                        Загрузка...
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <h3 class="content-title black">Navalny.Shop </h3>
+            <h3 class="content-title">Navalny.Shop </h3>
             <div id="shopList" class="">
+                    <div class="loader">Загрузка...</div>
                 <div class="items">
-                    <div class="media">
+                    <!-- <div class="media">
                         <img
                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22450%22%20viewBox%3D%220%200%20800%20450%22%3E%20%3Crect%20fill%3D%22%230F1C3F%22%20width%3D%22800%22%20height%3D%22450%22%2F%3E%20%3Ctext%20fill%3D%22%237FDBFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2290%22%20dy%3D%2231.499999999999996%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3EH%3C%2Ftext%3E%20%3C%2Fsvg%3E">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
