@@ -16,7 +16,7 @@
 Разработка информера происходит независимо от кого-либо. Если вам понравилось расширение — поддержите разработку.
 
 Вы можете:
-- помочь работе [Штабов](https://shtab.navalny.com)
+- помочь работе [Штабов](https://shtab.navalny.com/?utm_source=github&utm_medium=navalny_informer&utm_campaign=freenavalny)
 - сообщить об ошибке, предложить [улучшение, новую функцию](https://github.com/drugz/navalny_informer/issues) 
 - угостить разработчика чаем (пожалуйста, только без Новичка)
 
