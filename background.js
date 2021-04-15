@@ -23,9 +23,6 @@ try {
     }
   });
 
-  chrome.action.setBadgeText({
-    text: "H"
-  });
 } catch (e) {
   console.log(e);
 }
