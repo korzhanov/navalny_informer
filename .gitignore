@@ -1,5 +1,6 @@
 # Logs
 .history
+project_helper
 logs
 *.log
 npm-debug.log*
