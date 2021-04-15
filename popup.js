@@ -63,8 +63,8 @@ function showcontent() {
                 let pubdate = new Date(result.pubdate).toLocaleString("ru",{month: 'long',day: 'numeric'});
                 switch (item) {
                     case "posts":
-                        block += `<a class="posts flip-in-ver-right" target="_blank" href="https://shtab.navalny.com/hq/${hq_slug}/${id}?utm_source=chrome_extention&utm_medium=navalny_informer&utm_campaign=freenavalny" title="${annotation}">
-                                    <div class="media">
+                        block += `<a class="posts" target="_blank" href="https://shtab.navalny.com/hq/${hq_slug}/${id}?utm_source=chrome_extention&utm_medium=navalny_informer&utm_campaign=freenavalny" title="${annotation}">
+                                    <div class="media slide-in-bottom">
                                     <img src="${image}">
                                     </div>
                                     <div class="content">
