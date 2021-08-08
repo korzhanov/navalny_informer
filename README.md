@@ -1,4 +1,6 @@
-# Navalny Informer
+# !!! Attention, the project is closed until better times
+
+## Navalny Informer
 
 ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/drugz/navalny_informer) [![Install](https://img.shields.io/badge/Install-v1_0_1)](https://chrome.google.com/webstore/detail/hi-navalny-informer/mhahffdhjmmcllffihkedicnjicpfopg) 
 ![Cover](https://raw.githubusercontent.com/drugz/navalny_informer/main/Screenshot%205.jpg)
